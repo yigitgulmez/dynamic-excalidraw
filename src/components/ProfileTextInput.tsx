@@ -30,14 +30,14 @@ export default function ProfileTextInput({text, data}:ProfileTextInputProps) {
   const container = 'h-full px-3'
   return (
     <div className='flex gap-5 justify-between pe-7 items-center h-12'>
-      <div className={`${container} bg-indigo-600 flex-1 flex items-center rounded-xl`}>
+      <div className={`${container} bg-indigo-600 flex-1 flex items-center rounded-xl select-none`}>
         {text}:
       </div>
       <input 
         ref={inputRef}
         className={`${container} transition-all duration-500 flex-2 text-lg 
-          rounded-xl outline-none focus:outline-none 
-          ${editable ? 'bg-blue-500' : 'bg-blue-600'} 
+          rounded-xl outline-none focus:outline-none
+          ${editable ? 'bg-blue-500' : 'bg-blue-600 cursor-not-allowed select-none pointer-events-none'} 
           ${value !== (data ?? '') ? 'ring-2 ring-amber-300' : ''}`}
         type={text == 'Email' ? 'email' : 'text'}
         value={value}

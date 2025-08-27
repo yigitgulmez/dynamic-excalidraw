@@ -19,7 +19,7 @@ export default function profile() {
           <div className='flex flex-col items-center'>
             <div className='mt-10'>
               <Image
-                className='ring-4 ring-indigo-600 rounded-full'
+                className='ring-4 ring-indigo-600 rounded-full select-none'
                 src={'https://avatar.iran.liara.run/public/5'}
                 width={200}
                 height={200}
